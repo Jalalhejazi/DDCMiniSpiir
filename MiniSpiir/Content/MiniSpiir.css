@@ -1,0 +1,50 @@
+﻿
+.container {
+    width: 800px;
+  
+}
+
+table {
+    width: 100%;
+}
+
+.postingTable tr:nth-child(odd) {
+    background: #eee;
+}
+
+.postingTable td {
+    width: 300px;
+}
+
+.postingTable .date {
+    text-align: left;
+    width: 100px;
+}
+
+.postingTable .amount {
+    text-align: right;
+    width: 150px;
+}
+
+header {
+    background: #eee;
+    padding: 1em 0;
+}
+
+    header ul {
+        overflow: hidden;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        header ul li {
+            float: left;
+            margin-right: 20px;
+            text-transform: uppercase;
+        }
+
+    header a {
+        text-decoration: none;
+    }
+    

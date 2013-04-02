@@ -1,0 +1,15 @@
+﻿<section>
+    <h2>Poster</h2>
+    
+    <table class="table" data-bind="foreach: postings">
+        <tr>
+            <td class="date" data-bind="text: Date"></td>
+            <td data-bind="text: Text"></td>
+            <td data-bind="text: Category"></td>
+            <td data-bind="text: Amount" class="amount"></td>
+        </tr>
+    </table>
+    
+    <div data-bind="compose: 'viewmodels/postingForm'"></div>
+
+</section>

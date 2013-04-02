@@ -1,0 +1,43 @@
+﻿@using MiniSpiir.Models
+@model IEnumerable<MiniSpiir.Models.Posting>
+    
+@{
+    ViewBag.Title = "Poster";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Poster</h1>
+
+@if (TempData.ContainsKey("Message"))
+{
+    <p>@TempData["Message"]</p>
+    
+}
+
+<table class="table">
+    @foreach (Posting posting in Model)
+    {
+        <tr>
+            <td class="date">@posting.Date.ToShortDateString()</td>
+            <td>@posting.Text</td>
+            <td>@posting.Category</td>
+            <td class="amount">@posting.Amount</td>
+        </tr>
+    }
+</table>
+
+<h2>Opret post</h2>
+
+@using (Html.BeginForm("Create", "Posting"))
+{
+    <input name="date" type="date" />
+    <input name="text" type="text"  placeholder="Tekst" />
+    <input name="amount" type="text" placeholder="Beløb" />
+    <select name="category">        
+        <option>Dagligvarer</option>
+        <option>Tøj</option>
+        <option>Transport</option>
+        <option>Konferencer</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Opret</button>
+}

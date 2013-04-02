@@ -1,0 +1,8 @@
+﻿<form data-bind="submit: submit">
+    <input data-bind="value: date" name="date" type="date" />
+    <input data-bind="value: text" name="text" type="text"  placeholder="Tekst" />
+    <input data-bind="value: amount" name="amount" type="text" placeholder="Beløb" />
+    <select name="category" data-bind="value: category, options: ['Dagligvarer', 'Tøj', 'Transport', 'Konfererncer']">        
+    </select>
+    <button type="submit" class="btn btn-primary">Opret</button>
+</form>
